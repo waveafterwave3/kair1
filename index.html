@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Yellow Form</title>
+	<style>
+		@font-face {
+			font-family: work-sans;
+			src: url(fonts/WorkSans-VariableFont_wght.ttf);
+		}
+		body {
+			background-image: url(pic/midic3.png);
+			background-size:cover;
+			font-family: Work-sans;
+		}
+
+		form {
+			background-color: rgb(250, 225, 0);
+			padding: 20px;
+			margin: auto;
+			border-radius: 12px;
+			width: 500px;
+			margin-top: 120px;
+			padding-bottom: 50px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		select {
+			width: 100%;
+			padding: 12px;
+			margin: 8px 0;
+			box-sizing: border-box;
+			border-radius: 12px;
+			border: 1px solid #9c9e16;
+		}
+
+		input[type="submit"] {
+			width: 100%;
+			background-color: #000000;
+			font-family: Work-sans;
+			font-size: large;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 12px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+		background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="fullName">Full Name:</label>
+		<input type="text" id="fullName" name="fullName" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="course">Course:</label>
+		<select id="course" name="course">
+			<option value="1">1st Course</option>
+			<option value="2">2nd Course</option>
+			<option value="3">3rd Course</option>
+			<option value="4">4th Course</option>
+		</select>
+
+		<label for="specialty">Specialty:</label>
+		<input type="text" id="specialty" name="specialty" required>
+
+		<input type="submit" value="Submit">
+	</form>
+
+	<script>
+		const form = document.querySelector("form");
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			window.location.href = "success.html";
+		});
+	</script>
+</body>
+</html>
